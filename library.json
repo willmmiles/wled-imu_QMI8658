@@ -1,7 +1,9 @@
 {
-  "name": "wled-usermod-example",
-  "build": {
-    "libArchive": false
-  },
-  "dependencies": {}
+  "name": "wled-imu_QMI8658",
+  "build": { "libArchive": false },
+  "dependencies": {
+    "willmmiles/wled-motion_reactive": "*",
+    "lahavg/QMI8658": "1.0.1",
+    "bolderflight/Bolder Flight Systems Eigen": "^3.0.0"
+  }
 }
