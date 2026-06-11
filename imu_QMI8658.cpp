@@ -109,9 +109,6 @@ class QMI8658Mod : public Usermod, public IMUBase {
         return;
       }
 
-      // Register ourselves as the active IMU provider
-      IMU::registerProvider(*this);
-
       calibrateGyro();
 
       next_read = 0;
@@ -234,3 +231,8 @@ const char QMI8658Mod::_roll_deg[]           PROGMEM = "roll_deg";
 
 static QMI8658Mod imu_qmi8658;
 REGISTER_USERMOD(imu_qmi8658);
+
+// Compile-time provider registration: strong definition overrides the weak
+// default in motion_reactive.cpp.  Linking two IMU drivers simultaneously
+// produces a duplicate-symbol error — the correct behavior.
+IMUBase* IMU_getProvider() { return &imu_qmi8658; }
