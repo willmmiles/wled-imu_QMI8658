@@ -1,5 +1,6 @@
 {
   "name": "wled-imu_QMI8658",
+  "version": "0.0.1",
   "build": { "libArchive": false },
   "dependencies": {
     "willmmiles/wled-motion_reactive": "*",
