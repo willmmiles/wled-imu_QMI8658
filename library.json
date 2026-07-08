@@ -1,9 +1,22 @@
 {
   "name": "wled-imu_QMI8658",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "description": "WLED driver for QMI8658 IMU for the motion_reactive usermod",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/willmmiles/wled-imu_QMI8658.git"
+  },
+  "authors":
+  {
+    "name": "Will Miles",
+    "email": "will@willmiles.net",
+    "url": "https://github.com/willmmiles/"
+  },
+  "license": "MIT",
   "build": { "libArchive": false },
   "dependencies": {
-    "willmmiles/wled-motion_reactive": "*",
+    "willmmiles/wled-motion_reactive": "^0.1.0",
     "lahavg/QMI8658": "1.0.1",
     "bolderflight/Bolder Flight Systems Eigen": "^3.0.0"
   }

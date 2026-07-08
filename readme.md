@@ -38,12 +38,10 @@ Set `pitch_deg` / `roll_deg` to compensate:
 Add both this driver and `wled-motion_reactive` to your `custom_usermods` in `platformio_override.ini`:
 
 ```ini
-[env:myboard]
+[env:esp32dev_motion_reactive]
 extends = env:esp32dev
 custom_usermods =
   ${env:esp32dev.custom_usermods}
-  file:///path/to/wled-motion_reactive
-  file:///path/to/wled-imu_QMI8658
+  wled-motion_reactive = https://github.com/willmmiles/wled-motion_reactive.git
+  wled-imu_QMI8658 = https://github.com/willmmiles/wled-imu_QMI8658.git
 ```
-
-Or reference published repos directly by URL once available.
